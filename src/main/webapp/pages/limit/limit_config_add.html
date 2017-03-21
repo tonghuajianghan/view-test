@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>额度配置添加</title>
+
+<link href="/view-test/js/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+<link href="/view-test/css/base.css" rel="stylesheet">
+<script src="/view-test/js/jquery-3.1.1.min.js"></script>
+<script src="/view-test/js/bootstrap3/js/bootstrap.min.js"></script> 
+
+</head>
+<body style="margin:50px;">
+	<!-- header -->
+	<div class="page-header">
+		<h3><strong>额度配置新增</strong></h3><br/>
+	</div>
+	<!-- form add -->
+	<div>
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="limitCode">额度编码：</label>
+				<div class="col-sm-2"><input type="text" class="form-control disabled" id="limitCode" value="L0001"></div>
+				<label class="control-label col-sm-2" for="main">主体：</label>
+				<div class="col-sm-2">
+					<select class="form-control" id="main" >
+					  <option>账户</option>
+					  <option>商户</option>
+					  <option>额度分组3</option>
+					  <option>额度分组4</option>
+					  <option>额度分组5</option>
+					</select>
+				</div>
+				<div class="col-sm-2">
+					<input type="text" class="form-control disabled" id="limitCode" value="">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="limitGroup">额度分组：</label>
+				<div class="col-sm-2">
+					<select class="form-control" id="limitGroup" >
+					  <option>43号文专用</option>
+					  <option>额度分组2</option>
+					  <option>额度分组3</option>
+					  <option>额度分组4</option>
+					  <option>额度分组5</option>
+					</select>
+				</div>
+				<label class="control-label col-sm-2" for="limitName">额度名称：</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control" id="limitName" placeholder="额度名称">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="discrption">描述：</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control" id="discrption" placeholder="描述">
+				</div>
+				<label class="control-label col-sm-2" for="money">总金额：</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control" id="money" placeholder="总金额">
+				</div>
+				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="status"">状态：</label>
+				<div class="col-sm-2">
+					<select class="form-control" id="status" >
+					  <option>生效</option>
+					  <option>额度分组2</option>
+					  <option>额度分组3</option>
+					  <option>额度分组4</option>
+					  <option>额度分组5</option>
+					</select>
+				</div>
+			</div>
+			<!-- 维度 -->
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">维度选择</h3>
+			  </div>
+			  <div class="panel-body">
+			    <button class="btn btn-default">
+			    	<span class="glyphicon-font-base">时间维度-月</span>
+			    	<span class="glyphicon glyphicon-remove"></span>
+			    </button>
+			    <button class="btn btn-default">
+			    	<span class="glyphicon-font-base">43号文用户等级-1类</span>
+			    	<span class="glyphicon glyphicon-remove"></span>
+			    </button>
+			  </div>
+			</div>
+		</form>	
+	</div>
+</body>
+</html>
