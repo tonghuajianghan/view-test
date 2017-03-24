@@ -36,3 +36,21 @@
 .glyphicon-font-base {
   top: 0px;
 }
+
+
+/**预先定义样式*/
+.div-center {  
+    margin:0 auto;
+}
+
+.right {
+	float: right;
+}
+
+.margin-left-5{
+	margin-left: 5px;
+}
+
+.margin-left-10{
+	margin-left: 5px;
+}
