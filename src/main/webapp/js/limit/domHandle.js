@@ -7,7 +7,7 @@
  * 所有function内DOM定位数据默认均为DOM id
  */
 
-//jquery 延迟加载
+// jquery 延迟加载
 $(document).ready(function() {
 	
 	/** 
@@ -71,5 +71,14 @@ $(document).ready(function() {
 			return;
 		}
 	});
-
+	
+	/**
+	 * 	添加 必须填写CSS样式
+	 * 	<red>*</red>
+	 * 
+	 * */
+	 {
+		 var red = '<span style="color:red">*</span>';
+		 $(".required").prepend(red);
+	 }
 });
