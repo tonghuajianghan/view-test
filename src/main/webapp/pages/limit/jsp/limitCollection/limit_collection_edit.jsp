@@ -28,9 +28,9 @@
 	<div class="div-center">
 		<form id="defaultForm" class="form-horizontal" role="form">
 			<div class="form-group">
-				<label class="control-label col-sm-2" for="limitCode">额度集编码：</label>
+				<label class="control-label col-sm-2" for="limitCode">额度集id：</label>
 				<div class="col-sm-2">
-					<input type="text" class="form-control disabled" name="limitCode" id="limitCode" >
+					<input type="text" class="form-control" name="limitCode" id="limitCode" readonly>
 				</div>
 			</div>
 			<div class="form-group">

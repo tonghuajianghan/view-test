@@ -79,8 +79,10 @@
 						<button class="btn btn-default btn-xs">详情</button>
 					</td>
 					<td>
-						<button class="btn btn-default btn-xs">修改</button>
-						<button class="btn btn-default btn-xs">关闭</button>
+						<button class="btn btn-default btn-xs" data-toggle="modal" data-target=".confirmModel" data-whatever="开启">开启</button>
+						<button class="btn btn-default btn-xs" data-toggle="modal" data-target=".confirmModel" data-whatever="修改">修改</button>
+						<button class="btn btn-default btn-xs" data-toggle="modal" data-target=".confirmModel" data-whatever="关闭">关闭</button>
+						<button class="btn btn-default btn-xs" data-toggle="modal" data-target=".confirmModel" data-whatever="删除">删除</button>
 					</td>
 				</tr>
 				<tr>
@@ -155,5 +157,39 @@
 	    </div>
 	   </div>
 	 </div>
+	 
+	 <div class="modal fade confirmModel"  tabindex="-1" role="dialog" aria-labelledby="confirmModel">
+	   <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+			  <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title">卸载额度配置</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p>是否确认【<span></span>】</p>
+		        <br/>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-primary">确认</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		      </div>
+	    </div>
+	   </div>
+	 </div>
 </body>
+<script type="text/javascript">
+$(function(){
+	//操作  model 加载前执行
+	$('.confirmModel').on('show.bs.modal', function (event) {
+	  var button = $(event.relatedTarget); // Button that triggered the modal
+	  var recipient = button.data('whatever'); // Extract info from data-* attributes
+	  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+	  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+	  var modal = $(this);
+	  //modal.find('.modal-title').text('New message to ' + recipient)
+	  modal.find('.modal-body span').html(recipient)
+	});
+	
+});
+</script>
 </html>
