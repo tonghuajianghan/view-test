@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>额度配置添加</title>
+
+<link href="/view-test/js/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+<link href="/view-test/css/base.css" rel="stylesheet">
+<script src="/view-test/js/jquery-3.1.1.min.js"></script>
+<script src="/view-test/js/bootstrap3/js/bootstrap.min.js"></script> 
+
+<link href="/view-test/js/bootstrapvalidator/dist/css/bootstrapValidator.min.css" rel="stylesheet">
+<script src="/view-test/js/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script> 
+<script src="/view-test/js/bootstrapvalidator/dist/js/language/zh_CN.js"></script> 
+
+</head>
+<body style="margin:50px;">
+	<!-- header -->
+	<div class="page-header">
+		<h3><strong>额度配置新增</strong></h3><br/>
+	</div>
+	<!-- form add -->
+	<div>
+		<form id="defaultForm" class="form-horizontal" role="form">
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="limitCode">额度编码：</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control disabled" name="limitCode" id="limitCode" value="L0001">
+				</div>
+				<label class="control-label col-sm-2" for="main">主体：</label>
+				<div class="col-sm-2">
+					<select class="form-control" id="main" >
+					  <option>账户</option>
+					  <option>商户</option>
+					  <option>额度分组3</option>
+					  <option>额度分组4</option>
+					  <option>额度分组5</option>
+					</select>
+				</div>
+				<div class="col-sm-2">
+					<input type="text" class="form-control disabled" name="" id="main-second" value="">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="limitGroup">额度分组：</label>
+				<div class="col-sm-2">
+					<select class="form-control" id="limitGroup" >
+					  <option>43号文专用</option>
+					  <option>额度分组2</option>
+					  <option>额度分组3</option>
+					  <option>额度分组4</option>
+					  <option>额度分组5</option>
+					</select>
+				</div>
+				<label class="control-label col-sm-2" for="limitName">额度名称：</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control" id="limitName" name="limitName" placeholder="额度名称">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="discrption">描述：</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control" id="discrption" placeholder="描述">
+				</div>
+				<label class="control-label col-sm-2" for="money">总金额：</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control" id="money" name="money" placeholder="总金额">
+				</div>
+				
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="status"">状态：</label>
+				<div class="col-sm-2">
+					<select class="form-control" id="status" >
+					  <option>生效</option>
+					  <option>额度分组2</option>
+					  <option>额度分组3</option>
+					  <option>额度分组4</option>
+					  <option>额度分组5</option>
+					</select>
+				</div>
+			</div>
+			<!-- 维度 -->
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">维度选择</h3>
+			  </div>
+			  <div class="panel-body">
+			    <button class="btn btn-default">
+			    	<span class="glyphicon-font-base">时间维度-月</span>
+			    	<span class="glyphicon glyphicon-remove"></span>
+			    </button>
+			    <button class="btn btn-default">
+			    	<span class="glyphicon-font-base">43号文用户等级-1类</span>
+			    	<span class="glyphicon glyphicon-remove"></span>
+			    </button>
+			  </div>
+			</div>
+			
+			<input type="submit" class="btn btn-primary" value="提交"/>
+			<input type="button" class="btn btn-default" id="resetBtn" value="清空"/>
+		</form>	
+	</div>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#defaultForm').bootstrapValidator({
+        message: 'This value is not valid',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+        	limitCode: {
+	           validators: {
+	               notEmpty: {
+	                   message: '额度编码不能为空'
+	               }
+	           }
+	        },
+            limitName: {
+                validators: {
+                    notEmpty: {
+                        message: '额度名称不能为空'
+                    }
+                }
+            },
+	        money: {
+                validators: {
+                    notEmpty: {
+                        message: '总金额不能为空'
+                    },
+		            integer: {
+		                message: '总金额必须为数字'
+		            }
+                }
+            }
+        }
+    });
+	//重置
+    $('#resetBtn').click(function() {
+        $('#defaultForm').data('bootstrapValidator').resetForm(true);
+    });
+});
+</script>
+</html>
