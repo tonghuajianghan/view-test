@@ -1,9 +1,0 @@
-eclipse.preferences.version=1
-encoding//src/main/java=UTF-8
-encoding//src/main/webapp/pages/limit/jsp/limitCollection/limit_collection_edit.jsp=UTF-8
-encoding//src/main/webapp/pages/limit/jsp/limitCollection/limit_collection_install.jsp=UTF-8
-encoding//src/main/webapp/pages/limit/jsp/limitCollection/limit_collection_manage.jsp=UTF-8
-encoding//src/main/webapp/pages/limit/jsp/limitCollection/limit_collection_uninstall.jsp=UTF-8
-encoding//src/main/webapp/pages/limit/jsp/limitConfig/dimension_select.jsp=UTF-8
-encoding//src/main/webapp/pages/limit/jsp/limitConfig/limit_config.jsp=UTF-8
-encoding//src/main/webapp/pages/limit/jsp/limitConfig/limit_config_edit.jsp=UTF-8
